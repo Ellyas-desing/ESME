@@ -12,7 +12,7 @@ export default function StorePage() {
   const initialCategory = typeof params.category === 'string' ? params.category : 'Todos';
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
   const { width } = useWindowDimensions();
-  const columns = width > 1000 ? 4 : width > 700 ? 3 : 2;
+  const columns = width > 700 ? 3 : 2;
   const visibleProducts =
     selectedCategory === 'Todos'
       ? products
@@ -23,6 +23,9 @@ export default function StorePage() {
       <View style={styles.heading}>
         <Text style={styles.title}>Loja ESME</Text>
         <Text style={styles.subtitle}>Dispositivos para automação residencial</Text>
+        <Text style={styles.priceNote}>
+          Preços de referência pesquisados online; podem variar por marca e loja.
+        </Text>
       </View>
 
       <View style={styles.filters} accessibilityRole="tablist">
@@ -76,6 +79,12 @@ const styles = StyleSheet.create({
     marginTop: 5,
     color: colors.muted,
     fontSize: 14,
+  },
+  priceNote: {
+    marginTop: 8,
+    color: colors.muted,
+    fontSize: 12,
+    lineHeight: 18,
   },
   filters: {
     flexDirection: 'row',

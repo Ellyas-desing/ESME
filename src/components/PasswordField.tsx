@@ -30,7 +30,7 @@ export function PasswordField({ value, onChangeText }: PasswordFieldProps) {
         <Pressable
           accessibilityRole="button"
           accessibilityLabel={isVisible ? 'Ocultar senha' : 'Mostrar senha'}
-          accessibilityState={{ selected: isVisible }}
+          accessibilityState={{ checked: isVisible }}
           onPress={() => setIsVisible(visible => !visible)}
           hitSlop={8}
           style={styles.eyeButton}>
@@ -40,8 +40,8 @@ export function PasswordField({ value, onChangeText }: PasswordFieldProps) {
                 ? { ios: 'eye.slash', android: 'visibility_off', web: 'visibility_off' }
                 : { ios: 'eye', android: 'visibility', web: 'visibility' }
             }
-            size={21}
-            tintColor={colors.muted}
+            size={23}
+            tintColor={isVisible ? colors.pinkDark : colors.muted}
           />
         </Pressable>
       </View>

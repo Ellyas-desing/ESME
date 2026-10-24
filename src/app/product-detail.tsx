@@ -1,3 +1,4 @@
+import { Image } from 'expo-image';
 import { router, useLocalSearchParams } from 'expo-router';
 import { Pressable, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
 
@@ -21,10 +22,11 @@ export default function ProductDetailPage() {
 
       {product ? (
         <View style={[styles.detail, width > 760 && styles.wideDetail]}>
-          <View
+          <Image
+            source={product.image}
+            contentFit="contain"
             accessible
-            accessibilityRole="image"
-            accessibilityLabel={`Espaço reservado para a imagem de ${product.name}`}
+            accessibilityLabel={product.name}
             style={[styles.imagePlaceholder, width > 760 && styles.wideImagePlaceholder]}
           />
           <View style={styles.information}>

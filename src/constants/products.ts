@@ -4,41 +4,64 @@ export type Product = {
   category: string;
   price: string;
   description: string;
+  image: number;
 };
 
-export const categories = ['Todos', 'Segurança', 'Iluminação', 'Energia'];
+export const categories = ['Todos', 'Limpeza', 'Segurança', 'Automação', 'Iluminação', 'Energia'];
 
 export const products: Product[] = [
   {
-    id: '1',
-    name: 'Fechadura Smart F-Pro',
-    category: 'Segurança',
-    price: 'R$ 899,00',
+    id: 'robo-aspirador',
+    name: 'Robô aspirador com base',
+    category: 'Limpeza',
+    price: 'R$ 1.200,00',
     description:
-      'Acesso por biometria, senhas temporárias e aplicativo. Estrutura resistente com vidro temperado e alerta anti-arrombamento.',
+      'Robô aspirador com base de carregamento para apoiar a rotina de limpeza da casa.',
+    image: require('@/assets/images/product-robot-vacuum.png'),
   },
   {
-    id: '2',
-    name: 'Câmera Mibo 360º',
+    id: 'camera-externa',
+    name: 'Câmera externa Wi-Fi',
     category: 'Segurança',
-    price: 'R$ 349,00',
+    price: 'R$ 176,00',
     description:
-      'Monitoramento em tempo real Full HD com detecção de movimento e áudio bidirecional.',
+      'Câmera Wi-Fi externa com corpo móvel e antenas para acompanhar áreas do lado de fora.',
+    image: require('@/assets/images/product-outdoor-camera.png'),
   },
   {
-    id: '3',
-    name: 'Lâmpada LED Smart',
+    id: 'controle-infravermelho',
+    name: 'Controle universal i2GO',
+    category: 'Automação',
+    price: 'R$ 101,15',
+    description:
+      'Controle universal infravermelho para centralizar o comando de aparelhos compatíveis em um único dispositivo.',
+    image: require('@/assets/images/product-infrared-hub.png'),
+  },
+  {
+    id: 'fechadura-digital',
+    name: 'Fechadura digital Kuanttum',
+    category: 'Segurança',
+    price: 'R$ 325,00',
+    description:
+      'Fechadura digital com teclado numérico e leitura biométrica integrada à maçaneta.',
+    image: require('@/assets/images/product-smart-lock.png'),
+  },
+  {
+    id: 'lampada-rgb',
+    name: 'Lâmpada inteligente RGB',
     category: 'Iluminação',
-    price: 'R$ 89,00',
+    price: 'R$ 63,00',
     description:
-      'Iluminação personalizável com 16 milhões de cores, comando de voz e programação de rotinas.',
+      'Lâmpada LED inteligente com iluminação RGB para colorir e personalizar seus ambientes.',
+    image: require('@/assets/images/product-rgb-bulb.png'),
   },
   {
-    id: '4',
-    name: 'Tomada Inteligente',
+    id: 'interruptor-inteligente',
+    name: 'Interruptor touch com tomada',
     category: 'Energia',
-    price: 'R$ 119,00',
+    price: 'R$ 185,00',
     description:
-      'Controle e acompanhe o consumo elétrico dos seus aparelhos pelo smartphone.',
+      'Interruptor inteligente de parede com painel touch e tomada integrada.',
+    image: require('@/assets/images/product-touch-switch.png'),
   },
 ];

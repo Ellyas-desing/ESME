@@ -1,3 +1,4 @@
+import { Image } from 'expo-image';
 import { router } from 'expo-router';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
@@ -11,10 +12,11 @@ type ProductCardProps = {
 export function ProductCard({ product }: ProductCardProps) {
   return (
     <View style={styles.card}>
-      <View
+      <Image
+        source={product.image}
+        contentFit="contain"
         accessible
-        accessibilityRole="image"
-        accessibilityLabel={`Espaço reservado para a imagem de ${product.name}`}
+        accessibilityLabel={product.name}
         style={styles.imagePlaceholder}
       />
       <View style={styles.details}>
