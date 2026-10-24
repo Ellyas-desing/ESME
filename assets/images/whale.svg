@@ -6,9 +6,9 @@
     <filter id="silver-whale" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
       <feColorMatrix type="saturate" values="0"/>
       <feComponentTransfer>
-        <feFuncR type="linear" slope="1.08" intercept="0.08"/>
-        <feFuncG type="linear" slope="1.08" intercept="0.08"/>
-        <feFuncB type="linear" slope="1.08" intercept="0.08"/>
+        <feFuncR type="linear" slope="0.84" intercept="-0.14"/>
+        <feFuncG type="linear" slope="0.84" intercept="-0.14"/>
+        <feFuncB type="linear" slope="0.84" intercept="-0.14"/>
       </feComponentTransfer>
     </filter>
     <filter id="water-soft" x="-20%" y="-100%" width="140%" height="300%">
